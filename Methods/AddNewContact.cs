@@ -7,12 +7,12 @@ namespace PhoneBook
     {
         public void AddContact(PhoneBookList pbl, CareTaker careTaker)
         {
-            var i = pbl.BookList.Count()+1;//Needs to be modyfied
+            var i = pbl.BookList.Max(t => t.ID)+1;
 
             Person p = new Person();
 
             Console.Clear();
-            p.ID = i++;     //Needs to be modyfied
+            p.ID = i;     //Needs to be modyfied
 
             Console.Write($"Name: ");
             p.Name = Console.ReadLine();

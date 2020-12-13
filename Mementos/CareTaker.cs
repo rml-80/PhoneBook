@@ -23,10 +23,6 @@ namespace PhoneBook
         public void AddRedo(MementoPerson person)
         {
             RedoStack.Push(person);
-            Redo.ID = person.ID;
-            Redo.Name = person.Name;
-            Redo.Phone = person.Phone;
-            Redo.Action = person.Action;
         }
         public void RemoveRedo()
         {
@@ -36,9 +32,7 @@ namespace PhoneBook
                 Redo = RedoStack.Peek();
             }
         }
-
         public void MakeUndo(PhoneBookList pbl)
-
         {
             Person p = new Person
             {
